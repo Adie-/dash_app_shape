@@ -8,6 +8,7 @@ import pandas as pd
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 
 healthy_df = pd.read_csv('all_ages_healthy_app_params.csv')
 diseased_df = pd.read_csv('all_ages_diseased_app_params.csv')
