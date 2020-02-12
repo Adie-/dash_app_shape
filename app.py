@@ -10,8 +10,8 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 
-healthy_df = pd.read_csv('all_ages_healthy_app_params.csv')
-diseased_df = pd.read_csv('all_ages_diseased_app_params.csv')
+healthy_df = pd.read_csv('../data/femoral_head/femoral_head_healthy_app_parameters.csv')
+diseased_df = pd.read_csv('../data/femoral_head/femoral_head_perthes_app_parameters.csv')
 
 param_names = healthy_df.columns[3:]
 ages = healthy_df['Age'].unique()
